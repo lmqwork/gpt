@@ -1,4 +1,5 @@
 import 'package:auto_gpt_web/src/presentation/login/login_page.dart';
+import 'package:auto_gpt_web/src/presentation/pricing_table/pracing_table_page.dart';
 import 'package:auto_gpt_web/src/presentation/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: appTheme,
       builder: (context, child) => ResponsiveWrapper.builder(child,
-          maxWidth: 1200,
+          maxWidth: 1500,
           minWidth: 480,
           defaultScale: true,
           breakpoints: [
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             const ResponsiveBreakpoint.resize(1000, name: DESKTOP),
           ],
           background: Container(color: const Color(0xFFF5F5F5))),
-      home: LoginPage(),
+      home: PricingTablePage(),
     );
   }
 }
